@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://yehwy7jwpvfg"]
+[gd_scene load_steps=10 format=3 uid="uid://yehwy7jwpvfg"]
 
 [ext_resource type="PackedScene" uid="uid://cwgj5wu0c7sga" path="res://player.tscn" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://co2syqe7o8hv2" path="res://enemy.tscn" id="2_fj7yv"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_gv5m4"]
 sky_horizon_color = Color(0.662243, 0.671743, 0.686743, 1)
@@ -44,33 +45,48 @@ skeleton = NodePath("../..")
 
 [node name="Block" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, -1.58974, 1.13178, -2.27921)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Block2" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, 11.9807, 1.13178, -10.1138)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Block3" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, 8.44721, 1.13178, 2.14455)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Block4" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, -3.60397, 1.13178, -13.0708)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Block5" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, 6.51341, 1.13178, -6.06422)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Block6" type="CSGMesh3D" parent="Environment"]
 transform = Transform3D(1, 0, 0, 0, 2.41658, 0, 0, 0, 1, 15.8186, 1.13178, -3.49021)
+use_collision = true
+collision_mask = 0
 mesh = SubResource("BoxMesh_fj7yv")
 material = SubResource("StandardMaterial3D_tlwt5")
 
 [node name="Player" parent="." instance=ExtResource("1_f3sb7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.94351)
+
+[node name="Enemy" parent="." instance=ExtResource("2_fj7yv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.26002, 0, -5.8892)
